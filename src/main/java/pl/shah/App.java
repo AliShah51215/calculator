@@ -1,44 +1,23 @@
 package pl.shah;
 
-import java.util.Scanner;
-
-public class App {
-    public static void main(String[] args) {
-        String yn;
-
-        do
-        {
-            Scanner s = new Scanner(System.in);
-            System.out.println("Enter First No.");
-            double no1 = s.nextDouble();
-            System.out.println("Enter Second No.");
-            double no2 = s.nextDouble();
-            System.out.println("Select Symbol(+,-,*,/)");
-            String sym = s.next();
-            double res;
-            switch (sym) {
-                case "+" -> {
-                    res = no1 + no2;
-                    System.out.println("Addition is : " + res);
-                } case "-" -> {
-                    res = no1 - no2;
-                    System.out.println("Subtraction is : " + res);
-                }
-                case "*" -> {
-                    res = no1 * no2;
-                    System.out.println("Multiplication is : " + res);
-                }
-                case "/" -> {
-                    res = no1 / no2;
-                    System.out.println("Division is : " + res);
-                }
-                default -> System.out.println("Invalid Symbol");
-            }
-            System.out.println("Do You Want To Continue(Press y for Yes and n for No)");
-            yn=s.next();
-
-        } while (yn.equals("y")||yn.equals("Y"));
+class Calculator {
+    public static int sum(int num1, int num2) {
+        return num1 + num2;
+    }
+    public static int subtract(int num1, int num2) {
+        return num1 - num2;
+    }
+    public static int multiplication(int num1, int num2) {
+        return num1 * num2;
+    }
+    public static int division(int num1, int num2) {
+        return num1 / num2;
     }
 
-
+    public static void main( String[] args ) {
+        System.out.println("Addition is = " + sum(5,10));
+        System.out.println("Subtraction is = " +subtract(5,10));
+        System.out.println("Multiplication is =" +multiplication(5,10));
+        System.out.println("Division is = " +division (20,10));
+    }
 }
