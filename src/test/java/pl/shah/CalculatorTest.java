@@ -3,18 +3,18 @@ package pl.shah;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-public class AppTest {
+class CalculatorTest {
     @Test
     void shouldAddTwoNumbers15and21() {
         int num1 = 15;
         int num2 = 21;
 
-        int sum = Calculator.sum(num1, num2);
+        int sum = Calculator.add(num1, num2);
 
         Assertions.assertEquals(36, sum);
     }
     @Test
-     void shouldSubtractTwoNumbers31and12() {
+    void shouldSubtractTwoNumbers31and12() {
         int num1 = 31;
         int num2 = 12;
 
@@ -27,7 +27,7 @@ public class AppTest {
         int num1 = 9;
         int num2 = 43;
 
-        int multiplication = Calculator.multiplication(num1, num2);
+        int multiplication = Calculator.multiply(num1, num2);
 
         Assertions.assertEquals(387, multiplication);
     }
@@ -36,7 +36,7 @@ public class AppTest {
         int num1 = 6;
         int num2 = 2;
 
-        int division = Calculator.division(num1, num2);
+        int division = Calculator.divide(num1, num2);
 
         Assertions.assertEquals(3, division);
     }
