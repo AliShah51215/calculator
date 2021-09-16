@@ -15,7 +15,7 @@ class WeekDaysTest {
     }
     @Test
     void shouldCheckWeekends() {
-        String weekend = "Weekend";
+        String weekend = "Weekends";
 
         String result1 =  WeekDays.DayOfWeek(6);
         String result2 =  WeekDays.DayOfWeek(7);
