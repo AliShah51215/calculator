@@ -7,7 +7,7 @@ public class Movie {
     private int filmDurationInMinutes;
     private int productionYearOfFilm;
     private String nameOfDirector;
-    private String SurnameOfDirector;
+    private String surnameOfDirector;
 
 
 
@@ -16,7 +16,7 @@ public class Movie {
         this.filmDurationInMinutes = filmDurationInMinutes;
         this.productionYearOfFilm = productionYearOfFilm;
         this.nameOfDirector = nameOfDirector;
-        this.SurnameOfDirector = SurnameOfDirector;
+        this.surnameOfDirector = SurnameOfDirector;
 
 
     }
@@ -53,11 +53,11 @@ public class Movie {
     }
 
     public String getSurnameOfDirector() {
-        return SurnameOfDirector;
+        return surnameOfDirector;
     }
 
     public void setSurnameOfDirector(String SurnameOfDirector) {
-        this.SurnameOfDirector = SurnameOfDirector;
+        this.surnameOfDirector = SurnameOfDirector;
     }
 
 
