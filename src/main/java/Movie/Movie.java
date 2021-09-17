@@ -1,6 +1,5 @@
 package Movie;
 
-import javax.lang.model.util.ElementFilter;
 
 public class Movie {
     private String titleOfMovie;
@@ -62,10 +61,10 @@ public class Movie {
 
 
 
-public static void main(String[] args) {
+    public static void main(String[] args) {
 
-   new Movie("Elf", "Robert", "Polanski", 160, 2021);
-    new Movie("Avatar", "Mario", "Mariusz", 120, 2000);
+        new Movie("Elf", "Robert", "Polanski", 160, 2021);
+        new Movie("Avatar", "Mario", "Mariusz", 120, 2000);
 
+    }
 }
-        }
