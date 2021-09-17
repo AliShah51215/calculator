@@ -2,7 +2,7 @@ package Movie;
 
 
 public class Movie {
-    private String titleOfMovie;
+    private String titleOfFilm;
     private int filmDurationInMinutes;
     private int productionYearOfFilm;
     private String nameOfDirector;
@@ -10,8 +10,8 @@ public class Movie {
 
 
 
-    public Movie(String titleOfMovie,String nameOfDirector, String SurnameOfDirector, int filmDurationInMinutes, int productionYearOfFilm) {
-        this.titleOfMovie = titleOfMovie;
+    public Movie(String titleOfFilm,String nameOfDirector, String SurnameOfDirector, int filmDurationInMinutes, int productionYearOfFilm) {
+        this.titleOfFilm = titleOfFilm;
         this.filmDurationInMinutes = filmDurationInMinutes;
         this.productionYearOfFilm = productionYearOfFilm;
         this.nameOfDirector = nameOfDirector;
@@ -21,11 +21,11 @@ public class Movie {
     }
 
     public String getTitleOfMovie() {
-        return titleOfMovie;
+        return titleOfFilm;
     }
 
     public void setTitleOfMovie(String titleOfMovie) {
-        this.titleOfMovie = titleOfMovie;
+        this.titleOfFilm = titleOfMovie;
     }
 
 
