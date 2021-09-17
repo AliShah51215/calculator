@@ -62,8 +62,8 @@ public class Film {
 
     public static void main(String[] args) {
 
-        new Film("Elf", "Robert", "Polanski", 160, 2021);
-        new Film("Avatar", "Mario", "Mariusz", 120, 2000);
+        new Film("Rambo", "Robert", "Polanski", 160, 2021);
+        new Film("Avatar1", "Mario", "Mariusz", 120, 2000);
 
     }
 }
