@@ -1,5 +1,6 @@
 package CinemaSeat;
 
+
 public class PlaceInHall {
 
     private final int numberOfSeat;
