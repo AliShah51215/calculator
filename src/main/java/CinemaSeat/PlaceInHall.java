@@ -12,7 +12,7 @@ public class PlaceInHall {
         this.isOccupied = Occupied;
     }
 
-    public int numberOfSea(int i) {
+    public int numberOfSeat() {
         return numberOfSeat;
     }
 
