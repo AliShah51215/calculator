@@ -1,12 +1,12 @@
 package CinemaSeat;
 
-public class placeInHall {
+public class PlaceInHall {
 
     private final int numberOfSeat;
     private final int numberOfRow;
     private boolean isOccupied;
 
-    protected placeInHall(int numberOfSeat, int numberOfRow, boolean Occupied) {
+    protected PlaceInHall(int numberOfSeat, int numberOfRow, boolean Occupied) {
         this.numberOfSeat = numberOfSeat;
         this.numberOfRow = numberOfRow;
         this.isOccupied = Occupied;
