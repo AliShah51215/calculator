@@ -1,6 +1,6 @@
-package CenimaWorkers;
+package CinemaEmployees;
 
-public class TicketSeller extends BaseWorkers {
+   class TicketSeller extends BaseWorkers {
 
     public TicketSeller(String name, String surname, int employmentTime) {
         super(name, surname, employmentTime);
@@ -11,6 +11,6 @@ public class TicketSeller extends BaseWorkers {
     }
 
     public double calculateMonthlySalary() {
-        return super. getBasicSalary();
+        return super.getBasicSalary();
     }
 }

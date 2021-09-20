@@ -1,16 +1,20 @@
-    package CenimaWorkers;
+package CinemaEmployees;
 
-    import java.util.Calendar;
+import java.util.Calendar;
 
-    public class BaseWorkers {
+public abstract class BaseWorkers {
     private String name;
     private String surname;
-    private final int employmentTime;
-    private final double salary;
-    protected final static double FixSalary = 3000.0;
+    private int employmentTime;
+    private double salary;
+    protected final static double FixSalary;
+
+    static {
+        FixSalary = 3000.0;
+    }
 
     public BaseWorkers(String name, String surname, int employmentTime) {
-        this(name, surname, employmentTime, FixSalary );
+        this(name, surname, employmentTime, FixSalary);
     }
 
 

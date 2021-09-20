@@ -1,6 +1,6 @@
-package CenimaWorkers;
+package CinemaEmployees;
 
-    public class CinemaWorker {
+public class CinemaEmployees {
 
     public static void main(String[] args) {
         new TicketSeller("Dawid",
@@ -14,7 +14,6 @@ package CenimaWorkers;
                 21,
                 5000,
                 500);
-
 
     }
 }
