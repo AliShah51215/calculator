@@ -14,9 +14,9 @@ class RightAngledTriangleTest {
     }
 
     @Test
-    void ReturnFalseIfCalculationsAreThreePointThreeAndFourAndFive() {
+     void ReturnFalseIfCalculationsAreThreePointThreeAndFourPointAndFive() {
         double base = 3.3;
-        double height = 4;
+        double height = 4.2;
         double hypotenuse = 5;
         boolean result = AngledTriangle.RightAngledTriangle(base, height, hypotenuse);
         Assertions.assertFalse(result);
