@@ -4,4 +4,4 @@ Lesson 6
 Files
 Exceptions
 Files
-End Of Files
+End of Files

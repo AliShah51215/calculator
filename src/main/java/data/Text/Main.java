@@ -22,7 +22,7 @@ public class Main {
                 "Files\n" +
                 "Exceptions\n" +
                 "Files\n" +
-                "End Of Files";
+                "End of Files";
 
         TextFileWriter textFileWriter = new TextFileWriter();
         textFileWriter.writeToFile(pathToFile, text);
