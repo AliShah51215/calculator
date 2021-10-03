@@ -2,66 +2,9 @@ package bettercalculator;
 
 import java.util.Scanner;
 
+
 public class Main {
 
-
-    public static double add(double firstSum, double secondSum) {
-        return firstSum + secondSum;
-    }
-
-    public static double subtract(double firstSum, double secondSum) {
-        return firstSum - secondSum;
-    }
-
-    public static double division(double firstSum, double secondSum) {
-        return firstSum / secondSum;
-    }
-
-    public static double multiply(double firstSum, double secondSum) {
-        return firstSum * secondSum;
-    }
-
-    public static double modulo(double firstSum, double secondSum) {
-        return firstSum % secondSum;
-    }
-
-    public static double sinus(double angleA) {
-        return Math.sin(angleA);
-    }
-
-    public static double cosine(double angleA) {
-        return Math.cos(angleA);
-    }
-
-    public static double power(double base, double exponent) {
-        return Math.pow(base, exponent);
-    }
-
-    public static double rectangleArea(double side1, double side2) {
-        return side1 * side2;
-    }
-
-    public static double trapezoidField(double base1, double base2, double height) {
-        return ((base1 + base2) * height) / 2;
-    }
-
-    public static double circleField(double radius) {
-        final double pi = 3.14;
-        return pi * radius * radius;
-    }
-
-    public static double circumferenceOfRectangle(double side1, double side2) {
-        return (side1 + side2) * 2;
-    }
-
-    public static double trapezoidCircumference(double side1, double side2, double side3, double side4) {
-        return side1 + side2 + side3 + side4;
-    }
-
-    public static double piRadius(double radius) {
-        final double pi = 3.14;
-        return 2 * pi * radius;
-    }
 
     public static void main(String[] args) {
 
@@ -82,52 +25,52 @@ public class Main {
                         double a = Double.parseDouble(keyboard.nextLine());
                         System.out.println("Write 2nd Sum:");
                         double b = Double.parseDouble(keyboard.nextLine());
-                        System.out.println(add(a, b));
+                        System.out.println(BetterCalculator.add(a, b));
                     }
                     case ("subtract") -> {
                         System.out.println("Write 1st Sum:");
                         double c = Double.parseDouble(keyboard.nextLine());
                         System.out.println("Write 2nd Sum:");
                         double d = Double.parseDouble(keyboard.nextLine());
-                        System.out.println(subtract(c, d));
+                        System.out.println(BetterCalculator.subtract(c, d));
                     }
                     case ("divide") -> {
                         System.out.println("Write 1st Sum:");
                         double e = Double.parseDouble(keyboard.nextLine());
                         System.out.println("Write 2nd Sum:");
                         double f = Double.parseDouble(keyboard.nextLine());
-                        System.out.println(division(e, f));
+                        System.out.println(BetterCalculator.division(e, f));
                     }
                     case ("multiply") -> {
                         System.out.println("Write 1st Sum:");
                         double g = Double.parseDouble(keyboard.nextLine());
                         System.out.println("Write 2nd Sum:");
                         double h = Double.parseDouble(keyboard.nextLine());
-                        System.out.println(multiply(g, h));
+                        System.out.println(BetterCalculator.multiply(g, h));
                     }
                     case ("modulo") -> {
                         System.out.println("Write 1st Sum:");
                         double i = Double.parseDouble(keyboard.nextLine());
                         System.out.println("Write 2nd Sum:");
                         double j = Double.parseDouble(keyboard.nextLine());
-                        System.out.println(modulo(i, j));
+                        System.out.println(BetterCalculator.modulo(i, j));
                     }
                     case ("sinus") -> {
                         System.out.println("Enter value for the angle a (in radians):");
                         double k = Double.parseDouble(keyboard.nextLine());
-                        System.out.println(sinus(k));
+                        System.out.println(BetterCalculator.sinus(k));
                     }
                     case ("cosine") -> {
                         System.out.println("Enter value for the angle a (in radians):");
                         double l = Double.parseDouble(keyboard.nextLine());
-                        System.out.println(cosine(l));
+                        System.out.println(BetterCalculator.cosine(l));
                     }
                     case ("power") -> {
                         System.out.println("Enter base of the power:");
                         double m = Double.parseDouble(keyboard.nextLine());
                         System.out.println("Enter the exponent of the power:");
                         double n = Double.parseDouble(keyboard.nextLine());
-                        System.out.println(power(m, n));
+                        System.out.println(BetterCalculator.power(m, n));
                     }
                     default -> System.out.println("No such answer.");
                 }
@@ -149,7 +92,7 @@ public class Main {
                                 double a = Double.parseDouble(keyboard.nextLine());
                                 System.out.println("Write Side 2");
                                 double b = Double.parseDouble(keyboard.nextLine());
-                                System.out.println(rectangleArea(a, b));
+                                System.out.println(BetterCalculator.rectangleArea(a, b));
                             }
                             case ("trapezoid") -> {
                                 System.out.println("Write Base 1:");
@@ -158,12 +101,12 @@ public class Main {
                                 double d = Double.parseDouble(keyboard.nextLine());
                                 System.out.println("Write Height:");
                                 double e = Double.parseDouble(keyboard.nextLine());
-                                System.out.println(trapezoidField(c, d, e));
+                                System.out.println(BetterCalculator.trapezoidField(c, d, e));
                             }
                             case ("circle") -> {
                                 System.out.println("Write Field:");
                                 double f = Double.parseDouble(keyboard.nextLine());
-                                System.out.println(circleField(f));
+                                System.out.println(BetterCalculator.circleField(f));
                             }
                         }
                     case ("circumference"):
@@ -176,7 +119,7 @@ public class Main {
                                 double a = Double.parseDouble(keyboard.nextLine());
                                 System.out.println("Write Side 2");
                                 double b = Double.parseDouble(keyboard.nextLine());
-                                System.out.println(circumferenceOfRectangle(a, b));
+                                System.out.println(BetterCalculator.circumferenceOfRectangle(a, b));
                             }
                             case ("trapezoid") -> {
                                 System.out.println("Write Side 1:");
@@ -187,15 +130,18 @@ public class Main {
                                 double e = Double.parseDouble(keyboard.nextLine());
                                 System.out.println("Write Side 4:");
                                 double f = Double.parseDouble(keyboard.nextLine());
-                                System.out.println(trapezoidCircumference(c, d, e, f));
+                                System.out.println(BetterCalculator.trapezoidCircumference(c, d, e, f));
                             }
                             case ("circle") -> {
                                 System.out.println("Write Radius:");
                                 double g = Double.parseDouble(keyboard.nextLine());
-                                System.out.println(piRadius(g));
+                                System.out.println(BetterCalculator.piRadius(g));
                             }
                         }
                 }
+                break;
+            default:
+                throw new IllegalStateException("Unexpected value: " + calculator);
         }
     }
 }
