@@ -2,25 +2,29 @@ package salary_calculator;
 
 import externalServices.BaseSalaryService;
 import externalServices.SaturdayBonusService;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
+import org.mockito.Mockito;
 
 import java.math.BigDecimal;
 
-public class SalaryCalculatorTest {
-    private final SaturdayBonusService saturdayBonusService;
-    private final BaseSalaryService baseSalaryService;
+class SalaryCalculatorTest {
 
-    public SalaryCalculatorTest(SaturdayBonusService saturdayBonusService, BaseSalaryService baseSalaryService) {
-        this.saturdayBonusService = saturdayBonusService;
-        this.baseSalaryService = baseSalaryService;
-    }
+    @Test
+    void calculateSalary() {
+        int howManySaturdays = 4;
+        BigDecimal oneTimeBonus = new BigDecimal("400.0");
 
-    private BigDecimal calculateTotalBonus(int howManySaturdays, BigDecimal oneTimeBonus) {
-        BigDecimal saturdayBonus = new BigDecimal(howManySaturdays).multiply(saturdayBonusService.getSaturdayBonus());
-        return oneTimeBonus.add(saturdayBonus);
-    }
+        SaturdayBonusService saturdayBonusServiceMock = Mockito.mock(SaturdayBonusService.class);
+        BaseSalaryService baseSalaryServiceMock = Mockito.mock(BaseSalaryService.class);
 
-    public BigDecimal calculateSalary(int howManySaturdays, BigDecimal oneTimeBonus) {
-        BigDecimal baseSalary = baseSalaryService.getBaseSalary();
-        return baseSalary.add(calculateTotalBonus(howManySaturdays, oneTimeBonus));
+        Mockito.when(saturdayBonusServiceMock.getSaturdayBonus()).thenReturn(new BigDecimal("1000.0"));
+        Mockito.when(baseSalaryServiceMock.getBaseSalary()).thenReturn(new BigDecimal("5000.0"));
+
+        SalaryCalculator salaryCalculator = new SalaryCalculator(saturdayBonusServiceMock, baseSalaryServiceMock);
+
+        BigDecimal salary = salaryCalculator.calculateSalary(howManySaturdays, oneTimeBonus);
+
+        Assertions.assertEquals(new BigDecimal("9400.0"), salary);
     }
 }
