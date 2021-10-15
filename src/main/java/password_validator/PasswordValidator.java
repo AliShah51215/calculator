@@ -11,11 +11,20 @@ public class PasswordValidator {
 
 
     public static boolean isValid(String password) {
-        if (password.contains(year) || password.contains(year2)) {
+        if (password.contains(year2)) {
             return false;
         } else {
             Matcher matcher = pattern.matcher(password);
             return matcher.matches();
         }
     }
+
+    public static void main(String[] args) {
+        System.out.println(isValid("Rafash21ah@2021"));
+        System.out.println(isValid("Rafashah@21"));
+        System.out.println(isValid("Rafas21hah@1"));
+        System.out.println(isValid("Rafashah@1"));
+    }
+
 }
+
